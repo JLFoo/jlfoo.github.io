@@ -1,0 +1,25 @@
+a:link, a:visited { 
+  color: Orange;
+  text-decoration: underline dotted deeppink;
+  cursor: auto;
+}
+
+a:link:active, a:visited:active { 
+  color: Orange;
+}
+
+body{
+	font-family:Verdana;
+	font-size:16;
+	color: LightSlateGrey;	
+	background-color: WhiteSmoke;
+} 
+
+h1, h2, h3, h4{
+	color: Black;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
