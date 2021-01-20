@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div style="
-		position: absolute; top:10%; left:33%; height:50vh; width:50vw; 
+		position: absolute; top:10%; left:20%; height:50vh; width:50vw; 
 		background-color:DarkGreen;
 		opacity:0.7;
 		z-index:10;
@@ -15,15 +15,33 @@
 		
 		<p style="margin: 2em 2em;color:LavenderBlush;">
 			<a href="https://jlfoo.github.io/JavascriptSVG/">My Javascript SVG projects</a>
+			<hr id="myline" style="height:2px; border-width:0; color:Orange; background-color:orange; width:20%;">
 			<br><br>
 			Links: 
 			<ul style="margin: -1em 1em">
-				<li><a href="https://MoltenWolf.github.io/Balloon-game/">MoltenWolf</a></li>
+				<li><a href="https://MoltenWolf.github.io/Balloon-game/" target="_blank">MoltenWolf</a></li>
 			</ul>
 		
 	</div>
 	<div>
 		<img src="coffee&cake.jpg" style="z-index:-1; filter:grayscale(90%) blur(1px) brightness(120%);">
 	</div>
+	<script>
+		var element = document.getElementById('myline');
+		var line_w = 0;
+		
+		function drawLine(timestamp){
+			line_w++
+			element.style.width = line_w + "%";
+			
+			if(line_w <=80)
+				window.requestAnimationFrame(drawLine);
+		}
+		
+		window.requestAnimationFrame(drawLine);
+		
+	</script>
+
 </body>
+
 </html>
